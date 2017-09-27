@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="swati.example.com.messageme.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_launcher"
+                android:id="@+id/imageView" />
+
+            <TextView
+                android:text="MessageMe!"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textStyle="normal|bold"
+                android:textAlignment="textStart"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:autoText="false"
+                android:textColor="@android:color/white"
+                android:gravity="start"
+                android:layout_weight="2" />
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/menu1"
+                android:scaleType="fitXY"
+                android:background="@android:color/background_dark"/>
+            //android:onClick="showPopup"/>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:id="@+id/editTextUserName"
+        android:layout_below="@+id/appbar"
+        android:layout_centerHorizontal="true"
+        android:hint="Username" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:layout_below="@+id/editTextUserName"
+        android:layout_alignEnd="@+id/editTextUserName"
+        android:layout_marginTop="29dp"
+        android:id="@+id/editTextPassword"
+        android:hint="Password" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextPassword"
+        android:layout_marginTop="52dp"
+        android:id="@+id/buttonLogin"
+        android:layout_alignEnd="@+id/editTextPassword"
+        android:layout_alignStart="@+id/editTextPassword"
+        style="@style/Widget.AppCompat.Button.Colored" />
+
+    <Button
+        android:text="New User?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/buttonNewUser"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_below="@+id/buttonLogin"
+        android:layout_alignStart="@+id/buttonLogin"
+        android:layout_alignEnd="@+id/buttonLogin" />
+</RelativeLayout>

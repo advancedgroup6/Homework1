@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_read_msg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="swati.example.com.messageme.ReadMsgActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:layout_height="50dp"
+        android:background="@android:color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_launcher"
+                android:id="@+id/imageView" />
+
+            <TextView
+                android:text="Read Message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:textStyle="normal|bold"
+                android:textAlignment="textStart"
+                android:layout_gravity="center_vertical"
+                android:textSize="18sp"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:autoText="false"
+                android:textColor="@android:color/white"
+                android:gravity="start"
+                android:layout_weight="2" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_discard"
+                android:scaleType="fitXY"
+                android:background="@android:color/background_dark"
+                android:id="@+id/btnDelete"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp" />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_action_reply"
+                android:scaleType="fitXY"
+                android:background="@android:color/background_dark"
+                android:id="@+id/btnReply" />
+            //android:onClick="showPopup"/>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewFrom"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/appbar"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="10dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        android:layout_alignBottom="@+id/textViewFrom" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewFrom"
+        android:layout_alignStart="@+id/textViewFrom"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textViewRegion"
+        android:paddingBottom="10dp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        android:layout_alignBottom="@+id/textViewRegion"/>
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textViewMessage"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/textViewRegion"
+        android:layout_alignStart="@+id/textViewRegion" />
+
+</RelativeLayout>
